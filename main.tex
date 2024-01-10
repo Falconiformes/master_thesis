@@ -1,0 +1,32 @@
+\documentclass[12pt,a4paper,twoside,dutch]{book}
+\input{preamble}
+
+\begin{document}
+\frontmatter
+%TC:ignore
+\input{title_page}
+%\null\vspace{\stretch {1}}
+%\begin{flushright}
+% Hier je toewijdingstekst
+%\end{flushright}
+%\vspace{\stretch {2}}\null
+\include{chapters/abstract}
+\tableofcontents
+\listoffigures
+\listoftables
+\mainmatter
+%\linenumbers
+\pagestyle{plain}
+%TC:endignore
+\include{chapters/introduction}
+%TC:ignore
+\include{chapters/method}
+\include{chapters/results}
+\include{chapters/discussion}
+\backmatter
+\refstepcounter{chapter}
+\addcontentsline{toc}{chapter}{\bibname}
+\printbibliography
+%\printglossary[type=\acronymtype]
+%TC:endignore
+\end{document}

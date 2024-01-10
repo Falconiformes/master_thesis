@@ -1,0 +1,64 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[english,main=dutch]{babel}
+\usepackage{csquotes}
+\usepackage{mathptmx}
+\usepackage[final]{microtype}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+
+\usepackage[a4paper, margin=2.5cm,%
+            headsep=1.5cm, footskip=1.5cm]{geometry}
+
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{float}
+\usepackage{subcaption}
+
+\usepackage[backend=biber,style=vancouver]{biblatex}
+\addbibresource{./sources/bib.bib}
+
+\newenvironment{abstract}%
+{\cleardoublepage\null \vfill\begin{center}%
+\bfseries \abstractname \end{center}}%
+{\vfill\null}
+
+\usepackage{booktabs, multirow, multicol}
+
+\usepackage{etoolbox,xstring,ifthen}
+
+\usepackage[unicode=true]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=linkcolour,citecolor=linkcolour,
+            filecolor=linkcolour, urlcolor=linkcolour,
+            pdfauthor={Edon Namani},
+        }
+\usepackage[dutch, sort&compress]{cleveref}
+
+\usepackage{siunitx}
+\sisetup{separate-uncertainty}\sisetup{separate-uncertainty}
+
+\newcommand\fillin[1][3cm]{\makebox[#1]{\dotfill}}
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+    \fancyhead[L]{\textit{cardiologie}}
+    \fancyhead[R]{}
+    \fancyfoot[L]{S3611833}
+    \fancyfoot[R]{Edon Namani}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\headheight}{15pt}
+}
+
+\usepackage{titlesec}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{%
+                             \Huge\bfseries}{\thechapter\hsp
+                             \textcolor{gray}{$\mathbf{\Big\lvert}$}\hsp
+                            }%
+                            {0pt}{\Huge\bfseries}
+
+%\usepackage[switch,pagewise]{lineno}
